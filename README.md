@@ -4,6 +4,16 @@
 
 ---
 
+## 🌟 What is this?
+This is an advanced **Adaptive Learning Platform** designed to help students learn effectively and help teachers monitor progress. Unlike standard quizzes, this system **"thinks"** using Artificial Intelligence.
+
+### Key Features:
+1.  **🤖 AI-Powered Assessments**: The system uses a local AI (Ollama/Phi-3) to generate unique questions every time. No two quizzes are the same!
+2.  **🧠 Concept Drift Detection**: It detects if you are forgetting topics over time (using the "River" algorithm) and adapts the curriculum.
+3.  **📊 Smart Analytics**: Tracks student mastery using Bayesian Knowledge Tracing (BKT) to recommend the perfect study material.
+
+---
+
 ## 🟢 2-Minute Setup Guide
 Just **COPY AND PASTE** these commands into your terminal one by one.
 
