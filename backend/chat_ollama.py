@@ -110,7 +110,8 @@ def generate_sub_quiz(subject: str, focus_area: str, start_id: int):
         "stream": False, "format": "json"
     }
     try:
-        response = requests.post(OLLAMA_URL, json=payload, timeout=120)
+        # TIMEOUT increased to 300s for slower Windows machines
+        response = requests.post(OLLAMA_URL, json=payload, timeout=300)
         response.raise_for_status()
         raw_content = response.json()['message']['content']
         
