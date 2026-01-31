@@ -16,4 +16,9 @@ fi
 echo "🧠 Pulling AI Model (Phi-3)..."
 ollama pull phi3:mini
 
+echo "💾 Initializing Database..."
+# Ensure Python knows where 'backend' module is
+export PYTHONPATH=$PYTHONPATH:.
+python3 scripts/seed_data.py
+
 echo "✅ Setup Complete! Run ./start.sh to launch."

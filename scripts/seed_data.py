@@ -52,21 +52,22 @@ def seed_data():
     db.add_all(questions)
 
     # Users
-    hashed_pwd = get_password_hash("password123")
+    hashed_pwd = get_password_hash("student")
+    hashed_admin = get_password_hash("admin")
     
     # Students
-    s1 = Student(username="student1", password_hash=hashed_pwd, name="Alice Student")
+    s1 = Student(username="student", password_hash=hashed_pwd, name="Alice Student")
     s2 = Student(username="student2", password_hash=hashed_pwd, name="Bob Learner")
     
     # Instructors
-    i1 = Instructor(username="admin", password_hash=hashed_pwd, name="Dr. Smith")
+    i1 = Instructor(username="admin", password_hash=hashed_admin, name="Dr. Smith")
     
     db.add_all([s1, s2, i1])
     db.commit()
     
     print("Seeding complete.")
-    print("Users: student1/password123, student2/password123")
-    print("Instructor: admin/password123")
+    print("Users: student/student, student2/student")
+    print("Instructor: admin/admin")
     db.close()
 
 if __name__ == "__main__":
